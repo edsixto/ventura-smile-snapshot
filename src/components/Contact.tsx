@@ -22,17 +22,11 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    console.log("Form submission disabled");
     toast({
-      title: "Form Submitted",
-      description: "Thank you for contacting us. We'll get back to you shortly!",
+      title: "Form Submission Disabled",
+      description: "This is a demo website. Contact form submissions are disabled.",
       duration: 5000,
-    });
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: ""
     });
   };
 
@@ -60,6 +54,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Your name"
                   required
+                  disabled
                   className="w-full"
                 />
               </div>
@@ -74,6 +69,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="your.email@example.com"
                   required
+                  disabled
                   className="w-full"
                 />
               </div>
@@ -86,8 +82,9 @@ const Contact = () => {
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="(805) 555-1234"
+                  placeholder="(805) XXX-XXXX"
                   required
+                  disabled
                   className="w-full"
                 />
               </div>
@@ -102,6 +99,7 @@ const Contact = () => {
                   placeholder="How can we help you?"
                   rows={4}
                   required
+                  disabled
                   className="w-full"
                 />
               </div>
@@ -109,6 +107,7 @@ const Contact = () => {
               <Button type="submit" className="w-full bg-dental-primary hover:bg-dental-dark">
                 Send Message
               </Button>
+              <p className="text-sm text-center text-gray-500 mt-2">Form disabled - This is a demo website</p>
             </form>
           </div>
           
@@ -122,7 +121,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg">Phone</h4>
-                  <p className="text-gray-700">(805) 555-1234</p>
+                  <p className="text-gray-700">(805) XXX-XXXX</p>
                   <p className="text-gray-500 text-sm">Mon-Fri, 8am-5pm</p>
                 </div>
               </div>
