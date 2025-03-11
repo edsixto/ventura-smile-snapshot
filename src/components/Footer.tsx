@@ -1,5 +1,6 @@
 
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Facebook, Instagram, Twitter, Youtube, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,11 +8,21 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
+        <div className="text-center mb-10 p-6 bg-dental-primary/20 rounded-lg">
+          <h3 className="text-2xl font-bold mb-4">This Domain is Available for Purchase</h3>
+          <p className="mb-6 text-lg">VenturaDentists.com - Perfect for dental practices in Ventura, California</p>
+          <Button 
+            className="bg-white text-dental-primary hover:bg-gray-100 font-bold text-lg px-8 py-4"
+            onClick={() => window.open("https://mynamebrand.com/name/VenturaDentists.com", "_blank")}
+          >
+            <ExternalLink className="mr-2 h-6 w-6" /> BUY THIS DOMAIN
+          </Button>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-bold mb-4">VenturaDentists.com</h3>
             <p className="text-gray-400 mb-4">
-              Providing quality dental care to the Ventura community for over 15 years.
+              This is a holding site. The domain VenturaDentists.com is available for purchase.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-dental-primary transition-colors">
@@ -56,9 +67,15 @@ const Footer = () => {
             <address className="not-italic text-gray-400 space-y-2">
               <p>123 Main Street</p>
               <p>Ventura, CA 93001</p>
-              <p>Phone: (805) 555-1234</p>
+              <p>Phone: (805) XXX-XXXX</p>
               <p>Email: info@venturadentists.com</p>
             </address>
+            <Button 
+              className="mt-4 bg-dental-primary hover:bg-dental-dark text-white"
+              onClick={() => window.open("https://mynamebrand.com/name/VenturaDentists.com", "_blank")}
+            >
+              <ExternalLink className="mr-2 h-4 w-4" /> Buy This Domain
+            </Button>
           </div>
         </div>
         
@@ -72,7 +89,7 @@ const Footer = () => {
             <a href="#" className="hover:text-gray-400 transition-colors ml-2">Accessibility</a>
           </p>
           <p className="mt-2">
-            This is a demonstration website. Not affiliated with any actual dental practice.
+            This is a holding site. Not affiliated with any actual dental practice.
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Calendar } from "lucide-react";
+import { Calendar, ExternalLink } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -9,6 +9,9 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+            <div className="bg-dental-primary/10 text-dental-primary text-lg font-semibold px-4 py-2 rounded-full inline-block mb-4">
+              Domain For Sale
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
               Quality Dental Care in <span className="text-dental-primary">Ventura</span>
             </h1>
@@ -16,11 +19,14 @@ const Hero = () => {
               Experience exceptional dental care with our team of expert dentists. From routine check-ups to advanced cosmetic procedures, we're here for all your dental needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button className="bg-dental-primary hover:bg-dental-dark text-white font-bold py-3 px-8 rounded-md text-lg shadow-lg">
-                <Calendar className="mr-2 h-5 w-5" /> Book Appointment
+              <Button 
+                className="bg-dental-primary hover:bg-dental-dark text-white font-bold py-3 px-8 rounded-md text-lg shadow-lg"
+                onClick={() => window.open("https://mynamebrand.com/name/VenturaDentists.com", "_blank")}
+              >
+                <ExternalLink className="mr-2 h-5 w-5" /> BUY THIS DOMAIN
               </Button>
               <Button variant="outline" className="border-dental-primary text-dental-primary hover:bg-dental-light py-3 px-8 rounded-md text-lg">
-                View Services
+                <Calendar className="mr-2 h-5 w-5" /> Learn More
               </Button>
             </div>
           </div>
