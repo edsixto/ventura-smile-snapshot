@@ -25,7 +25,11 @@ const Hero = () => {
               >
                 <ExternalLink className="mr-2 h-5 w-5" /> BUY THIS DOMAIN
               </Button>
-              <Button variant="outline" className="border-dental-primary text-dental-primary hover:bg-dental-light py-3 px-8 rounded-md text-lg">
+              <Button 
+                variant="outline" 
+                className="border-dental-primary text-dental-primary hover:bg-dental-light py-3 px-8 rounded-md text-lg"
+                onClick={() => window.open("https://mynamebrand.com/name/VenturaDentists.com", "_blank")}
+              >
                 <Calendar className="mr-2 h-5 w-5" /> Learn More
               </Button>
             </div>

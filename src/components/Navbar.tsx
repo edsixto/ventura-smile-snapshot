@@ -12,7 +12,12 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <a href="#" className="flex items-center">
             <h1 className="text-dental-primary text-2xl font-bold">VenturaDentists.com</h1>
-            <span className="ml-2 text-sm bg-dental-primary text-white px-2 py-1 rounded">FOR SALE</span>
+            <span 
+              className="ml-2 text-sm bg-dental-primary text-white px-2 py-1 rounded cursor-pointer"
+              onClick={() => window.open("https://mynamebrand.com/name/VenturaDentists.com", "_blank")}
+            >
+              FOR SALE
+            </span>
           </a>
           
           <div className="hidden md:flex items-center space-x-8">
