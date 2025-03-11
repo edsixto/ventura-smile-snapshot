@@ -1,4 +1,3 @@
-
 import { Facebook, Instagram, Twitter, Youtube, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -22,7 +21,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">VenturaDentists.com</h3>
             <p className="text-gray-400 mb-4">
-              This is a holding site. The domain VenturaDentists.com is available for purchase.
+              This is a Temporary Website to demonstrate how a site could look. The domain VenturaDentists.com is available for purchase.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-dental-primary transition-colors">
@@ -89,7 +88,7 @@ const Footer = () => {
             <a href="#" className="hover:text-gray-400 transition-colors ml-2">Accessibility</a>
           </p>
           <p className="mt-2">
-            This is a holding site. Not affiliated with any actual dental practice.
+            This is a Temporary Website to demonstrate how a site could look. Not affiliated with any actual dental practice.
           </p>
         </div>
       </div>
