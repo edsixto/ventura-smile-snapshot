@@ -1,20 +1,20 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tooth, UserCheck, Calendar, Heart, Award, Sparkles } from "lucide-react";
+import { Heart, Calendar, Award, ArrowRight, ArrowUp, ArrowDown } from "lucide-react";
 
 const services = [
   {
-    icon: <Tooth className="h-10 w-10 text-dental-primary" />,
+    icon: <ArrowRight className="h-10 w-10 text-dental-primary" />,
     title: "General Dentistry",
     description: "Comprehensive check-ups, cleanings, fillings, and preventative care to maintain oral health."
   },
   {
-    icon: <Sparkles className="h-10 w-10 text-dental-primary" />,
+    icon: <ArrowUp className="h-10 w-10 text-dental-primary" />,
     title: "Cosmetic Dentistry",
     description: "Transform your smile with whitening, veneers, bonding, and other aesthetic treatments."
   },
   {
-    icon: <UserCheck className="h-10 w-10 text-dental-primary" />,
+    icon: <ArrowDown className="h-10 w-10 text-dental-primary" />,
     title: "Restorative Care",
     description: "Restore function and appearance with crowns, bridges, implants, and dentures."
   },
