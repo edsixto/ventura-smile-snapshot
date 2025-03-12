@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Clock } from 'lucide-react';
 
@@ -116,7 +117,6 @@ const CountdownTimer = () => {
       <div className="mb-2">
         <span className="text-2xl font-bold text-green-900">${currentPrice}</span>
         <span className="text-gray-500 ml-2 line-through">${nextPrice}</span>
-        <div className="text-sm text-green-700 mt-1">Limited Time Offer</div>
       </div>
       
       <div className="text-sm text-green-800 mb-3">
