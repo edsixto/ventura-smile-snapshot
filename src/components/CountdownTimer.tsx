@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Clock } from 'lucide-react';
 
@@ -17,7 +16,7 @@ const CountdownTimer = () => {
     seconds: 0
   });
   const [currentPrice, setCurrentPrice] = useState<number>(599);
-  const [nextPrice, setNextPrice] = useState<number>(699);
+  const [nextPrice, setNextPrice] = useState<number>(799);
 
   // Set the target date for first price increase (Friday at 10am EST)
   // For demo purposes, setting this to a date in the near future
@@ -54,16 +53,16 @@ const CountdownTimer = () => {
       // Determine current price and next price based on current time
       if (now > secondTarget) {
         // After second deadline
-        setCurrentPrice(799);
-        setNextPrice(799);
+        setCurrentPrice(999);
+        setNextPrice(999);
       } else if (now > firstTarget) {
         // Between first and second deadline
-        setCurrentPrice(699);
-        setNextPrice(799);
+        setCurrentPrice(799);
+        setNextPrice(999);
       } else {
         // Before first deadline
         setCurrentPrice(599);
-        setNextPrice(699);
+        setNextPrice(799);
       }
       
       // Calculate time remaining to the appropriate deadline
