@@ -17,7 +17,7 @@ const CountdownTimer = () => {
     seconds: 0
   });
   const [currentPrice, setCurrentPrice] = useState<number>(599);
-  const [nextPrice, setNextPrice] = useState<number>(799);
+  const [nextPrice, setNextPrice] = useState<number>(2799);
 
   const getTargetDate = () => {
     const now = new Date();
@@ -50,11 +50,11 @@ const CountdownTimer = () => {
         setCurrentPrice(2799);
         setNextPrice(2799);
       } else if (now > firstTarget) {
-        setCurrentPrice(799);
+        setCurrentPrice(2799);
         setNextPrice(2799);
       } else {
         setCurrentPrice(599);
-        setNextPrice(799);
+        setNextPrice(2799);
       }
       
       const targetDate = now > firstTarget ? secondTarget : firstTarget;
