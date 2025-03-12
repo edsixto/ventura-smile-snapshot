@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Calendar, ExternalLink } from "lucide-react";
+import CountdownTimer from "./CountdownTimer";
 
 const Hero = () => {
   return (
@@ -18,9 +19,14 @@ const Hero = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
               Quality Dental Care in <span className="text-dental-primary">Ventura</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg">
+            <p className="text-lg md:text-xl text-gray-700 mb-6 max-w-lg">
               Experience exceptional dental care with our team of expert dentists. From routine check-ups to advanced cosmetic procedures, we're here for all your dental needs.
             </p>
+            
+            <div className="mb-6">
+              <CountdownTimer />
+            </div>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button 
                 className="bg-dental-primary hover:bg-dental-dark text-white font-bold py-3 px-8 rounded-md text-lg shadow-lg"
