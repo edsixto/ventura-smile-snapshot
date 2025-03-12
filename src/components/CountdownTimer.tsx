@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Clock } from 'lucide-react';
 
@@ -19,17 +18,13 @@ const CountdownTimer = () => {
   const [currentPrice, setCurrentPrice] = useState<number>(599);
   const [nextPrice, setNextPrice] = useState<number>(799);
 
-  // Set the target date for first price increase (Friday at 10am EST)
-  // For demo purposes, setting this to a date in the near future
   const getTargetDate = () => {
     const now = new Date();
-    // Find the next Friday
     const daysUntilFriday = (5 + 7 - now.getDay()) % 7;
     const fridayDate = new Date(now);
     fridayDate.setDate(now.getDate() + daysUntilFriday);
-    fridayDate.setHours(10, 0, 0, 0); // 10am
+    fridayDate.setHours(10, 0, 0, 0);
     
-    // If it's already past 10am on a Friday, move to next Friday
     if (now > fridayDate) {
       fridayDate.setDate(fridayDate.getDate() + 7);
     }
@@ -37,7 +32,6 @@ const CountdownTimer = () => {
     return fridayDate;
   };
 
-  // Calculate the second target date (3 days after first increase)
   const getSecondTargetDate = () => {
     const firstTarget = getTargetDate();
     const secondTarget = new Date(firstTarget);
@@ -51,22 +45,17 @@ const CountdownTimer = () => {
       const firstTarget = getTargetDate();
       const secondTarget = getSecondTargetDate();
       
-      // Determine current price and next price based on current time
       if (now > secondTarget) {
-        // After second deadline
-        setCurrentPrice(999);
-        setNextPrice(999);
+        setCurrentPrice(2799);
+        setNextPrice(2799);
       } else if (now > firstTarget) {
-        // Between first and second deadline
         setCurrentPrice(799);
-        setNextPrice(999);
+        setNextPrice(2799);
       } else {
-        // Before first deadline
         setCurrentPrice(599);
         setNextPrice(799);
       }
       
-      // Calculate time remaining to the appropriate deadline
       const targetDate = now > firstTarget ? secondTarget : firstTarget;
       const difference = targetDate.getTime() - now.getTime();
       
@@ -89,14 +78,12 @@ const CountdownTimer = () => {
     return () => clearInterval(timer);
   }, []);
   
-  // Format the next date with year included
   const formatNextDate = () => {
     const targetDate = new Date();
     const now = new Date();
     const firstTarget = getTargetDate();
     
     if (now > firstTarget) {
-      // Show second target date
       return getSecondTargetDate().toLocaleDateString('en-US', { 
         weekday: 'long', 
         month: 'short', 
@@ -107,7 +94,6 @@ const CountdownTimer = () => {
         timeZoneName: 'short'
       });
     } else {
-      // Show first target date
       return firstTarget.toLocaleDateString('en-US', { 
         weekday: 'long', 
         month: 'short', 
@@ -130,6 +116,7 @@ const CountdownTimer = () => {
       <div className="mb-2">
         <span className="text-2xl font-bold text-green-900">${currentPrice}</span>
         <span className="text-gray-500 ml-2 line-through">${nextPrice}</span>
+        <div className="text-sm text-green-700 mt-1">Limited Time Offer</div>
       </div>
       
       <div className="text-sm text-green-800 mb-3">
