@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages for hit95.com
 
 on:
   workflow_dispatch:
